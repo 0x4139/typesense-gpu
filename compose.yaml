@@ -1,0 +1,22 @@
+name: 0x4139/typesense-gpu
+services:
+  typesense:
+    runtime: nvidia
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - TYPESENSE_VERSION=${TYPESENSE_VERSION}
+        - CUDA_VERSION=${CUDA_VERSION}
+    container_name: typesense
+    image: 0x4139/typesense-gpu:${TYPESENSE_VERSION}-cuda${CUDA_VERSION}
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    restart: on-failure
+    ports:
+      - "8108:8108"
+    volumes:
+      - typesense:/data
+    command: '--data-dir /data --api-key=${API_KEY} --enable-cors'
+volumes:
+  typesense:
