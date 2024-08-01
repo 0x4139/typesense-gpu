@@ -1,7 +1,5 @@
 # typesense-gpu
 
-[![Docker Build Status](https://img.shields.io/docker/build/0x4139/typesense-gpu.svg)](https://hub.docker.com/r/0x4139/typesense-gpu)
-
 A Docker setup for running [Typesense](https://typesense.org/) with GPU support using the NVIDIA Container Toolkit.
 
 ## Table of Contents
@@ -79,7 +77,7 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
 
 ---
 
