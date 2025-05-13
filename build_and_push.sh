@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Define variables
-TYPESENSE_VERSION="26.0"
+TYPESENSE_VERSION="28.0"
 DOCKER_USERNAME="0x4139"
 IMAGE_NAME="typesense-gpu"
-CUDA_VERSIONS=("11.7.1-cudnn8-runtime-ubuntu20.04" "12.2.2-cudnn8-runtime-ubuntu22.04" "12.5.1-cudnn-devel-ubuntu20.04")
+CUDA_VERSIONS=("11.8.0-cudnn8-runtime-ubuntu22.04")
 
 # Loop through each CUDA version, build and push the Docker image
 for CUDA_VERSION in "${CUDA_VERSIONS[@]}"; do

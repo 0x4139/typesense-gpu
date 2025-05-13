@@ -9,7 +9,7 @@ services:
         - TYPESENSE_VERSION=${TYPESENSE_VERSION}
         - CUDA_VERSION=${CUDA_VERSION}
     container_name: typesense
-    image: 0x4139/typesense-gpu:${TYPESENSE_VERSION}-cuda${CUDA_VERSION}
+    #e  image: 0x4139/typesense-gpu:${TYPESENSE_VERSION}-cuda${CUDA_VERSION}
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     restart: on-failure

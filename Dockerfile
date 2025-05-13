@@ -1,7 +1,7 @@
-ARG CUDA_VERSION=12.2.2-cudnn8-runtime-ubuntu22.04
+ARG CUDA_VERSION=11.8.0-cudnn8-runtime-ubuntu22.04
 FROM nvidia/cuda:${CUDA_VERSION}
 # Declaring the version of typesense to install after FROM because FROM "eats" the ARG values
-ARG TYPESENSE_VERSION=26.0
+ARG TYPESENSE_VERSION=28.0
 
 # Debugging output to ensure the versions are correctly set
 RUN echo "TYPESENSE_VERSION is ${TYPESENSE_VERSION}"
